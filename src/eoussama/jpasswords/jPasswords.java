@@ -3,10 +3,6 @@ package eoussama.jpasswords;
 import java.util.Random;
 
 public abstract class jPasswords {
-    /*
-        Hash
-        Auth
-     */
 
     public static final String LOWER_CASE = "abcdefghijklmnopqrstuvwxyz";
     public static final String UPPER_CASE = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
