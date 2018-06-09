@@ -35,8 +35,7 @@ public abstract class jPasswords {
         while(count++ < __hashedString.length() - 1) {
             char __character = (char)((int)__hashedString.charAt(count) + __hashedString.length());
             Random rand = new Random();
-            //__character = __character > 126 ? (char)(rand.nextInt(126 - 32 + 1) + 32) : __character < 32 ? (char)(rand.nextInt(126 - 32 + 1) + 32) : __character;
-            __character = __character > 126 ? (char)(126) : __character < 32 ? (char)(32) : __character;
+            __character = __character > 126 ? (char)(rand.nextInt(126 - 32 + 1) + 32) : __character < 32 ? (char)(rand.nextInt(126 - 32 + 1) + 32) : __character;
             __hashedString.setCharAt(count, __character);
         }
 
