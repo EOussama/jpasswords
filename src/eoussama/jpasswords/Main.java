@@ -1,16 +1,14 @@
 package eoussama.jpasswords;
 
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
-        String password, salt, result;
+        int count = 10;
 
-        password = "password123";
-        salt = "fpogjp,";//jPasswords.Generate(128, null);
-        result = jPasswords.Hash(password, salt, -1);
+        while(count-- > 0)
+            System.out.println(jPasswords.Generate(10, null));
 
-        System.out.println("Password: \t" + password);
-        System.out.println("Salt: \t\t" + salt);
-        System.out.println("Result: \t" + result);
     }
 }
