@@ -14,7 +14,7 @@ public abstract class jPasswords {
         StringBuilder __entries = new StringBuilder();
         Random rand = new Random();
 
-        if (entries == null) __entries.append(LOWER_CASE+UPPER_CASE+SYMBOLS+NUMBERS);
+        if (entries == null || entries.length == 0) __entries.append(LOWER_CASE+UPPER_CASE+SYMBOLS+NUMBERS);
         else __entries.append(String.join("", entries));
         while(chars-- > 0) __generatedString += Character.toString(__entries.charAt(rand.nextInt(__entries.length())));
 
@@ -36,7 +36,7 @@ public abstract class jPasswords {
             __hashedString.setCharAt(count, __character);
         }
 
-        return (chars != -1) ? __hashedString.reverse().toString().substring(0, chars) : __hashedString.reverse().toString();
+        return (chars > -1) ? __hashedString.reverse().toString().substring(0, chars) : __hashedString.reverse().toString();
     }
 
     public static boolean Authenticate(String password, String salt, String target) {
